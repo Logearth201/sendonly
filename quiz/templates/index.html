@@ -1,0 +1,10 @@
+{% extends "template.html" %}
+{% block content %}
+<h1>クイズ</h1>
+{% for quiz in quizs %}
+<h2>{{ quiz.title }}</h2>
+<p>{{ quiz.question_text }}</p>
+<p>答え：<span style="color:#fff">{{ quiz.answer }}</span></p>
+
+{% endfor %}
+{% endblock %}
