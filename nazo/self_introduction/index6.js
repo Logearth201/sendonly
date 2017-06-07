@@ -1,0 +1,14 @@
+$(function(){
+    $('#button1').click(function(){
+        window.location.href="index2.html";
+    })
+    $('#button2').click(function(){
+        window.location.href="index.html";
+    })
+    $('#button3').click(function(){
+        window.location.href="index3.html";
+    })
+    $('#button4').click(function(){
+        window.location.href="index4.html";
+    })
+})

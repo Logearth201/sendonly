@@ -1,0 +1,27 @@
+body{
+    background-image  : url("りっか１.gif");
+    background-size: 25% auto;
+}
+
+#opener{
+    width:600px;
+    height:200px;
+    font-size:70px;
+}
+
+#quizbutton{
+    padding-left:330px;
+    padding-top:80px;
+}
+
+#closer{
+    width:600px;
+    height:50px;
+    font-size:25px;
+}
+
+#text1,#text2{
+    font-weight: bold;
+    font-size: 50px;
+    color:#F781D8;
+}

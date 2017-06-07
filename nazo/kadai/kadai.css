@@ -1,0 +1,12 @@
+body{
+  background-color:gold;
+}
+.keiyaku,.qb{
+  float:left;
+}
+.qb{
+  float:right;
+}
+.mami{
+  padding:20px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+ <head>
+   <meta charset="utf-8" lang="ja">
+   <title>電卓</title>
+   <link rel="Stylesheet" href="index4.css">
+   <script src="jquery-3.2.1.min.js"></script>
+   <script src="index4.js"></script>
+
+ </head>
+ <body>
+  <Marquee id="ec" scrollamount="80">電卓だーーー (チャーーラーラーrーtrwrgwウィmrgtzbダツツダツツダツツダツツダツダツデツツデツツ</Marquee>
+   <div class ="leftside">
+   <form name="calc1">
+   <input id="input" type="text" name="text1" placeholder="計算するでゲソ" size="10">
+   <input id="cbutton"class="btn" type="button" value="C" onClick="calc_run('C')">
+   <br>
+   <input id="input2" type="text" name="text2" placeholder="奇跡も、魔法も、あるんだよ" size="23">
+
+
+     <table>
+       <tr>
+         <td><input class="btn" type="button" value="７" onClick="calc_run('7')"></td>
+         <td><input class="btn" type="button" value="８" onClick="calc_run('8')"></td>
+         <td><input class="btn" type="button" value="９" onClick="calc_run('9')"></td>
+         <td><input class="btn" type="button" value="÷" onClick="calc_run('/')"></td>
+       </tr>
+       <tr>
+         <td><input class="btn" type="button" value="４" onClick="calc_run('4')"></td>
+         <td><input class="btn" type="button" value="５" onClick="calc_run('5')"></td>
+         <td><input class="btn" type="button" value="６" onClick="calc_run('6')"></td>
+         <td><input class="btn" type="button" value="×" onClick="calc_run('*')"></td>
+
+       </tr>
+       <tr>
+         <td><input class="btn" type="button" value="１" onClick="calc_run('1')"></td>
+         <td><input class="btn" type="button" value="２" onClick="calc_run('2')"></td>
+         <td><input class="btn" type="button" value="３" onClick="calc_run('3')"></td>
+         <td><input class="btn" type="button" value="－" onClick="calc_run('-')"></td>
+         <!-- <td><input class="btn" type="button" value="(" onClick="calc_run('(')"></td> -->
+      </tr>
+      <tr>
+        <td><input class="btn" type="button" value="０" onClick="calc_run('0')"></td>
+        <td><input class="btn" type="button" value="・" onClick="calc_run('.')"></td>
+        <td><input class="btn" type="button" value="＝" onClick="calc_run('=')"></td>
+        <td><input class="btn" type="button" value="＋" onClick="calc_run('+')"></td>
+        <!-- <td><input class="btn" type="button" value=")" onClick="calc_run(')')"></td> -->
+      </tr>
+    </table>
+  </form>
+</div>
+
+<div class="rightside">
+  <p>
+  <img id="sayaka" src="さやか１.gif">
+ </p>
+ <p>
+  <button id="back" onClick="kakunin()">
+    計算もできないなんて・・・あたしって、ほんとバカ</button>
+  </p>
+</div>
+
+</body>

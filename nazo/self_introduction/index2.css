@@ -1,0 +1,38 @@
+body{
+  background-color:#6E6E6E;
+}
+#text1{
+  display:none;
+}
+
+#text2{
+  display:none;
+}
+
+#qb{
+  display:none;
+}
+#homura-button{
+  display:none;
+}
+
+.counter{
+  line-height:10px;
+    display:none;
+}
+
+.youare{
+  font-size:30px;
+}
+
+#btn{
+    font-size: 40px;
+}
+
+#leftside{
+    float:left;
+}
+
+#j{
+    width:200px;
+}
