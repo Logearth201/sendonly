@@ -1,0 +1,20 @@
+{% extends "user/template.html" %}
+{% block content %}
+
+<div class="instant_message">
+	{{ message }}
+</div>
+
+<form method="post" class="authenticate_position">{% csrf_token %}
+<label>ユーザーID</label>
+<p><input type="text" name="username" placeholder="ユーザー名を入れようね！" required></p>
+<label>パスワード</label>
+<p><input type="password" name="password" placeholder="パスワードを入力してください" required></p>
+<p><input type="submit" class="btn-red" value="VIVID 承認"/></p>
+</form>
+<p>未登録の場合は、「サインアウト」をしましょう。</p>
+<p><textarea>
+利用規約
+こずえ
+</textarea></p>
+{% endblock %}

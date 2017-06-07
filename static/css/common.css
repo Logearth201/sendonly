@@ -142,6 +142,48 @@ body{
     }
 }
 
+/*
+	中心パート
+*/
+#centerpart{
+	clear:both;
+	max-width:800px;
+	margin:auto;
+	padding:10px 5% 10px 5%;
+}
+
+/*
+	フォーム
+*/
+#centerpart input[type="password"],input[type="text"]{
+	padding:5px;
+	border-radius:5px;
+	width:80%;
+	max-width:400px;
+	font-size:15px;
+	border:1px solid #888;
+	margin-bottom:10px;
+}
+
+#centerpart button,input[type="button"],input[type="submit"]{
+	padding:5px;
+	border-radius:5px;
+	border:1px solid #888;
+	cursor:pointer;
+}
+
+#centerpart .btn-red{
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#6666aa),color-stop(0.5,#6666aa),color-stop(0.5,#7777cc),to(#7777cc));
+	color:#fff;
+}
+#centerpart .btn-red:hover{
+	background-image:-webkit-gradient(linear,left top,left bottom,from(#7777aa),color-stop(0.5,#7777aa),color-stop(0.5,#8888cc),to(#8888cc));
+}
+
+
+/*
+	フッター
+*/
 
 #footer{
     clear:both;
