@@ -1,17 +1,40 @@
-from django.shortcuts import render,redirect,get_objects_or_404
+from django.shortcuts import render,redirect,get_object_or_404
 from .models import Lounge,LoungeBelong,LoungeMessage
+from django.contrib.auth.models import User
+from django.http.response import HttpResponse
+import json
 
-def lounge_show(request,pk):
-	lounge = get_objects_or_404(Lounge,id=pk)
-	leader = LoungeBelong.objects.get(belongs_lounge=self,is_leader=True)
-	user_lounge_memo = LoungeBelong.objects.get(self,user=request.user)
-	user_lounge_memo = User.objects.get(id=1)
+def lounge_detail(request,pk):
+	lounge = get_object_or_404(Lounge,id=pk)
+	leader = LoungeBelong.objects.filter(belongs_lounge=lounge,is_leader=True)
+	user_lounge_memo = LoungeBelong.objects.get(user=request.user)
 	
-	# “¯‚¶ƒ‰ƒEƒ“ƒW‚É‘®‚µ‚Ä‚¢‚ê‚ÎAƒRƒƒ“ƒg‚ğŒ©‚é‚±‚Æ‚ª‚Å‚«‚é
-	if user_lounge_memo.belongs_lounge.id == lounge.id
-		messages = LoungeMessage.filter(lounge=self)
-	
-	return render(request,"lounge_index.html",{"lounge":lounge,"messages":messages})
+	return render(request,"template.html",{"lounge":lounge})
 
+def lounge_comment_detail(request,pk):
+	lounge = get_object_or_404(Lounge,id=pk)
+	user_lounge_memo = LoungeBelong.objects.get(user=request.user)
+	
+	if (user_lounge_memo.belongs_lounge.id == lounge.id):
+		messages_raw = LoungeMessage.objects.filter(lounge=lounge).order_by("id").reverse()[:5]
+	else:
+		return HttpResponse("")
+	
+	# JSONå½¢å¼ã§è¿”ã™
+	messages = []
+	for data in messages_raw:
+		messages.append({"data":data.content,"id":data.id,"user_id":data.user.id,"name":data.user.username})
+	
+	return HttpResponse(json.dumps(messages,ensure_ascii=False))
+
+def lounge_belongs_user(request,pk):
+	lounge = get_object_or_404(Lounge,id=pk)
+	messages_raw = LoungeBelongs.objects.filter(lounge=lounge).order_by("id")
+
+def lounge_comment_create(request,pk):
+	if request.method == "POST":
+		pass
+	else:
+		return HttpResponse("è£œéºè²´æ§˜ï¼GETã§ãªã‚“ã‹é€ã‚“ãªã‚ˆ")
 
 

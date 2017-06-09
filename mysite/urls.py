@@ -8,5 +8,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r"^quiz/",include("quiz.urls")),
+    url(r"^lounge/",include("lounge.urls")),
     url(r"^",include("user.urls"))
 ]

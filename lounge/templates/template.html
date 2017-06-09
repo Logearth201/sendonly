@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ラウンジ</title>
+        <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/lounge.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/lounge.css' %}">
+        <input type="hidden" id="lounge_id" value="{{ lounge.id }}">
+    </head>
+    <body>
+        <div id="header_bar">
+            <input type="radio" name="select-lounge" value="掲示板" checked>掲示板
+            <input type="radio" name="select-lounge" value="メンバー">メンバー
+            <input type="radio" name="select-lounge" value="ラウンジ情報">ラウンジ情報
+        </div>
+        <div id="container">
+            <div class="lounge_menu_bar">
+
+            </div>
+            <div id="mainpart">
+                <div id="message_container">
+
+                </div>
+                <!--pager-->
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+        lounge = new Lounge();
+        </script>
+    </body>
+</html>
